@@ -36,16 +36,15 @@ deleteItem = (id) => {
 }
 
 addItem = (header,contant) => {
-  // console.log(header, contant);
-  const newItem = {
+    const newItem = {
     contant,
     header, 
     favorite: false,
     like: false,
-    id: this.maxId++    
+    id: this.maxId++ 
   }
   this.setState(({data}) => {
-    const newData = [...data, newItem ];
+    const newData = [...data, newItem];
     return {
       data: newData
     }
@@ -110,8 +109,7 @@ onChangeFilterSelect = (filter) => {
 onChangeModalActivity = () => {
   this.setState(({modalActivity})=> ({
     modalActivity: !modalActivity
-  })) 
-  console.log(this.state.modalActivity);   
+  }))   
 }
 
 render() {

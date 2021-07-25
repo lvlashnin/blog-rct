@@ -34,16 +34,13 @@ export default class PostAddForm extends Component {
 
     render() {
         const { modalActivity, onChangeModalActivity } = this.props;
-        let modalClassName = 'post-modal';
-        if (modalActivity) {
-            modalClassName = 'post-modal post-modal--active'
-        }
+      
         return (
-            <div className={modalClassName}>
+            <div className={modalActivity ? 'post-modal post-modal--active' : 'post-modal'}>
                 <div className="post-modal__container">
                     <form
                         action="#"
-                        onSubmit={this.onSubmit}
+                        onSubmit={this.onSubmit}                        
                     >
                         <input
                             className="form-control form-control-header"
@@ -63,6 +60,7 @@ export default class PostAddForm extends Component {
                             <button
                                 type="submit"
                                 className="btn btn-outline-secondary"
+                                onClick={onChangeModalActivity}
                             >Add Post</button>
 
                             <button
