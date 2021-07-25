@@ -1,0 +1,12 @@
+.app-header {
+    &__logo {
+        font-size: 30px;
+    }
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}

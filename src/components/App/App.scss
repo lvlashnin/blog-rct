@@ -1,0 +1,23 @@
+.app{
+  padding: 20px;
+}
+
+.hide{
+  opacity: 0;  
+  transition: 0.5s;  
+}
+
+.active{
+  opacity: 1;
+  transition: 0.5s; 
+}
+
+.btn{
+  margin-right: 5px;
+  min-width: 100px;
+}
+
+.search-panel{
+  display: flex;
+  margin-top: 20px;
+}
